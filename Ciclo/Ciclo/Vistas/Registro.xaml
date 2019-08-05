@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ciclo.Vistas.Registro"
+             BackgroundImage="fondo.jpg">
+    <Grid>
+        <BoxView Color="#D35400" Opacity="0.5"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Padding="30,20" >
+                <Label Text="REGISTER" HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" TextColor="#00E676"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="user.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Username" x:Name="txt_user" Style="{StaticResource txt}" Unfocused="Txt_user_Unfocused" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="password.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Password" x:Name="txt_pass" Style="{StaticResource txt}" IsPassword="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="password.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Confirm Password" x:Name="txt_pass2" Style="{StaticResource txt}" IsPassword="True" TextChanged="Txt_pass2_TextChanged"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="email.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Email" x:Name="txt_email" Keyboard="Email" Style="{StaticResource txt}"/>
+                </StackLayout>
+                <Button Text="SIGN UP" x:Name="btn_ingresar" BackgroundColor="#FF8F00"  TextColor="White" CornerRadius="5" HorizontalOptions="End" Clicked="Btn_ingresar_Clicked" WidthRequest="100"/>
+                <Label x:Name="statusMessage"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

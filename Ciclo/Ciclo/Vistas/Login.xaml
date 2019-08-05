@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ciclo.Vistas.Login"
+             BackgroundImage="fondo.jpg"
+             Title="Mono-Kletas">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style x:Key="botones" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <BoxView Color="#2980B8" Opacity="0.5"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <StackLayout Grid.Row="0" Padding="30,20" >
+                <Image Source="monkeylogo.png" HorizontalOptions="Center"/>
+                <Label Text="LOGIN" HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold" TextColor="#00E676"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="user.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Username" x:Name="txt_user" Style="{StaticResource txt}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="password.png" HorizontalOptions="Start"/>
+                    <Entry Placeholder="Password" x:Name="txt_pass" IsPassword="True" Style="{StaticResource txt}"/>
+                </StackLayout>
+                <Button Text="Forgot?" x:Name="btn_recuperar" Clicked="Btn_recuperar_Clicked" Style="{StaticResource botones}"/>
+                <Button Text="LOGIN" x:Name="btn_ingresar" BackgroundColor="#FF8F00"  TextColor="White" CornerRadius="5" HorizontalOptions="End" WidthRequest="100"/>
+                <Button Text="Sign up" x:Name="btn_registro" Clicked="Btn_registro_Clicked" Style="{StaticResource botones}"/>
+                <Label x:Name="lbl_aviso" TextColor="White"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
